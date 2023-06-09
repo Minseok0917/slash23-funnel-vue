@@ -17,6 +17,7 @@ import RegisterHead from "@components/RegisterHead.vue";
 import { ref } from "vue";
 
 defineEmits(["next"]);
+const props = defineProps({ state: Object });
 
-const name = ref("");
+const name = ref(props.state.name);
 </script>

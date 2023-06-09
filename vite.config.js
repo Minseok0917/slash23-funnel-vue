@@ -24,4 +24,7 @@ export default defineConfig({
     resolve: {
         alias: resolveAlias,
     },
+    server: {
+        host: true,
+    },
 });

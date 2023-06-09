@@ -16,5 +16,7 @@
 import { ref } from "vue";
 import RegisterHead from "@components/RegisterHead.vue";
 
-const address = ref("");
+const props = defineProps({ state: Object });
+
+const address = ref(props.state.address);
 </script>
