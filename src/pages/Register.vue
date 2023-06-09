@@ -4,8 +4,7 @@
     </section>
 </template>
 <script setup>
-import { useFunnel } from "@composables/useFunnel";
-import Funnel from "@components/Funnel.vue";
+import { Funnel, useFunnel } from "@functions/funnel";
 import RegisterName from "./RegisterName.vue";
 import RegisterAddress from "./RegisterAddress.vue";
 import RegisterSuccess from "./RegisterSuccess.vue";

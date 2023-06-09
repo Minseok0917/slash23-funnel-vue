@@ -5,6 +5,7 @@ import path from "path";
 const resolveAlias = Object.fromEntries(
     Object.entries({
         "@components": "./src/components",
+        "@functions": "./src/functions",
         "@composables": "./src/composables",
         "@cstore": "./src/composable/store",
         "@directive": "./src/directive",
