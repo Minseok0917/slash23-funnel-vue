@@ -1,0 +1,112 @@
+@import "./font.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+button {
+    background: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+input {
+    background: transparent;
+    border: 0;
+    outline: 0;
+}
+
+// register
+.register {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    .head {
+        position: sticky;
+        padding: 10px;
+        svg {
+            width: 30px;
+            height: 30px;
+            path {
+                fill: #ddd;
+            }
+        }
+    }
+    .body {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        .content {
+            flex: 1;
+            padding: 20px;
+
+            label {
+                font-size: 0.875rem;
+                color: #ccc;
+                display: block;
+                input {
+                    width: 100%;
+                    padding: 10px 0;
+                    border-bottom: 1px solid #eee;
+                    font-size: 1rem;
+                }
+            }
+
+            h1 {
+                text-align: center;
+                padding: 10px 0;
+            }
+            .image-box {
+                border-radius: 0.5rem;
+                height: 250px;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .center {
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                h1 {
+                    text-align: center;
+                    font-size: 1.25rem;
+                }
+                p {
+                    text-align: center;
+                    font-size: 0.875rem;
+                    color: #999;
+                }
+                .btn-container {
+                    padding: 20px 0;
+                    display: flex;
+                    justify-content: center;
+                }
+                button {
+                    text-decoration: underline;
+                }
+            }
+        }
+        .bottom {
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            button {
+                padding: 15px 0;
+                width: 100%;
+                border-radius: 15px;
+                background: #3a5cbd;
+                color: #fff;
+                font-size: 1.25rem;
+            }
+        }
+    }
+}
