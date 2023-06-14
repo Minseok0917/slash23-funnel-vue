@@ -23,6 +23,10 @@ const { step, steps, state } = useFunnel({
                 setState({ ...state.value, name });
                 setStep("address");
             },
+            onStepMADM({ name }) {
+                setState({ ...state.value, name });
+                setStep("success");
+            },
         },
         {
             stepName: "address",

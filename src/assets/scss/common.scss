@@ -109,3 +109,28 @@ input {
         }
     }
 }
+
+// flow chart
+#funnel-flow-chart {
+    position: fixed;
+    left: 50%;
+    bottom: 100px;
+    padding: 20px;
+    transform: translateX(-50%);
+    user-select: none;
+    background: rgba(240, 240, 240, 0.8);
+    border-radius: 5px;
+    .button-container {
+        display: flex;
+        justify-content: flex-end;
+    }
+    &-open {
+        position: fixed;
+        right: 2rem;
+        bottom: 100px;
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        background-color: #eee;
+    }
+}

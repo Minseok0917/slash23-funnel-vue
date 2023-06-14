@@ -6,7 +6,7 @@
             v-on="currentStepHandlers"
         ></component>
     </template>
-    <FunnelFlowChart />
+    <FunnelFlowChart :steps="steps" />
 </template>
 <script setup>
 import FunnelFlowChart from "./FunnelFlowChart.vue";
