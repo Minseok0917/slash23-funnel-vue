@@ -3,12 +3,15 @@
         <component
             :is="currentStep.component"
             :state="state"
-            @step="currentStep.onStep"
+            v-on="currentStepHandlers"
         ></component>
     </template>
+    <FunnelFlowChart />
 </template>
 <script setup>
+import FunnelFlowChart from "./FunnelFlowChart.vue";
 import { computed } from "vue";
+
 const props = defineProps({
     step: String,
     steps: Object,
@@ -18,5 +21,13 @@ const props = defineProps({
 const currentStep = computed(() => {
     const { step, steps } = props;
     return steps.find(({ stepName }) => stepName === step);
+});
+
+const currentStepHandlers = computed(() => {
+    return Object.fromEntries(
+        Object.entries(currentStep.value)
+            .filter(([name]) => name.match(/^on.+/))
+            .map(([name, value]) => [name.replace("on", ""), value])
+    );
 });
 </script>
